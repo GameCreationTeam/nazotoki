@@ -29,11 +29,6 @@ repositories {
 
 dependencies {
 
-    // loggers
-    compile "org.slf4j:slf4j-api:1.7.9"
-    compile "org.slf4j:jul-to-slf4j:1.7.9"
-    compile "ch.qos.logback:logback-classic:1.1.2"
-
     // spring-boot
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile "org.springframework.boot:spring-boot-starter-test"
