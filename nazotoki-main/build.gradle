@@ -3,15 +3,14 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'io.spring.gradle:dependency-management-plugin:0.4.1.RELEASE'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE'
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
-
-apply plugin: 'io.spring.dependency-management'
+apply plugin: 'spring-boot'
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
@@ -28,12 +27,6 @@ repositories {
     mavenCentral()
 }
 
-dependencyManagement {
-    imports {
-        mavenBom 'io.spring.platform:platform-bom:1.1.2.RELEASE'
-    }
-}
-
 dependencies {
 
     // loggers
@@ -42,9 +35,8 @@ dependencies {
     compile "ch.qos.logback:logback-classic:1.1.2"
 
     // spring-boot
-    compile 'org.springframework.boot:spring-boot-starter-web:1.2.3.RELEASE'
-    compile "org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE"
-    compile  "org.springframework.boot:spring-boot-starter-test:1.2.3.RELEASE"
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile "org.springframework.boot:spring-boot-starter-test"
 
     compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
     compile "org.thymeleaf:thymeleaf-spring4:2.1.4.RELEASE"
