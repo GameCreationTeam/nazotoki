@@ -21,6 +21,8 @@ jar {
         attributes 'Implementation-Title': 'Gradle Quickstart',
                    'Implementation-Version': version
     }
+    baseName = 'spring-boot-game'
+    version = '1.0.0'
 }
 
 repositories {
