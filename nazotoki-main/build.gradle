@@ -35,11 +35,17 @@ dependencyManagement {
 }
 
 dependencies {
+
+    // loggers
+    compile "org.slf4j:slf4j-api:1.7.9"
+    compile "org.slf4j:jul-to-slf4j:1.7.9"
+    compile "ch.qos.logback:logback-classic:1.1.2"
+
     //spring-boot
     compile 'org.springframework.boot:spring-boot-starter-web:1.2.3.RELEASE'
     compile "org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE"
     compile  "org.springframework.boot:spring-boot-starter-test:1.2.3.RELEASE"
-  
+
     compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
     compile "org.thymeleaf:thymeleaf-spring4:2.1.4.RELEASE"
 
