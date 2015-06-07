@@ -9,10 +9,13 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'application'
 
 apply plugin: 'io.spring.dependency-management'
 
-sourceCompatibility = 1.5
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
 version = '1.0'
 jar {
     manifest {
@@ -35,6 +38,8 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
 
     compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+    compile "org.thymeleaf:thymeleaf-spring4:2.1.4.RELEASE"
+
     testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
