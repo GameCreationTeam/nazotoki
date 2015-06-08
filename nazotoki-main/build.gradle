@@ -15,14 +15,13 @@ apply plugin: 'spring-boot'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
-version = '1.0'
 jar {
+    version = '1.0.0'
+    baseName = 'spring-boot-game'
     manifest {
         attributes 'Implementation-Title': 'Gradle Quickstart',
                    'Implementation-Version': version
     }
-    baseName = 'spring-boot-game'
-    version = '1.0.0'
 }
 
 repositories {
